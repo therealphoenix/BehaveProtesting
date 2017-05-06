@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="25935" started-at="2017-05-06T17:27:24Z" finished-at="2017-05-06T17:27:50Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="25935" started-at="2017-05-06T17:27:24Z" finished-at="2017-05-06T17:27:50Z">
+      <class name="com.klindziuk.regulartest.RegularTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="beforeSuite" is-config="true" duration-ms="6197" started-at="2017-05-06T20:27:18Z" finished-at="2017-05-06T20:27:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="checkTheAntiHack_Scenario_4()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="checkTheAntiHack_Scenario_4" duration-ms="2121" started-at="2017-05-06T20:27:24Z" finished-at="2017-05-06T20:27:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheAntiHack_Scenario_4 -->
+        <test-method status="PASS" signature="checkTheContactUsPageFaceBookImageLink_Scenario_2()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="checkTheContactUsPageFaceBookImageLink_Scenario_2" duration-ms="8037" started-at="2017-05-06T20:27:26Z" finished-at="2017-05-06T20:27:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheContactUsPageFaceBookImageLink_Scenario_2 -->
+        <test-method status="PASS" signature="checkTheErrorPage_Scenario_5()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="checkTheErrorPage_Scenario_5" duration-ms="3136" started-at="2017-05-06T20:27:34Z" finished-at="2017-05-06T20:27:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheErrorPage_Scenario_5 -->
+        <test-method status="PASS" signature="checkTheFaceBookPage_Scenario_3()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="checkTheFaceBookPage_Scenario_3" duration-ms="10741" started-at="2017-05-06T20:27:37Z" finished-at="2017-05-06T20:27:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheFaceBookPage_Scenario_3 -->
+        <test-method status="PASS" signature="checkTheMainPage_Scenario_1()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="checkTheMainPage_Scenario_1" duration-ms="1842" started-at="2017-05-06T20:27:48Z" finished-at="2017-05-06T20:27:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTheMainPage_Scenario_1 -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.klindziuk.regulartest.RegularTest@c4c815]" name="afterSuite" is-config="true" duration-ms="3663" started-at="2017-05-06T20:27:50Z" finished-at="2017-05-06T20:27:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.klindziuk.regulartest.RegularTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 6, Time elapsed: 1.578 sec <<< FAILURE!
+beforeSuite(com.klindziuk.regulartest.RegularTest)  Time elapsed: 1.314 sec  <<< FAILURE!
+java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkState(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:111)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:302)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:156)
+	at com.klindziuk.util.BrowserDriver.selectDriver(BrowserDriver.java:25)
+	at com.klindziuk.regulartest.RegularTest.beforeSuite(RegularTest.java:28)
+
