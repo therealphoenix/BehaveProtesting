@@ -10,13 +10,14 @@
   <name>BehaveProtesting</name>
   <url>http://maven.apache.org</url>
  <build>
+ 
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-eclipse-plugin</artifactId>
             <version>2.17</version>
             <configuration>
-                <downloadSources>true</downloadSources>
+                <downloadSources>false</downloadSources>
                 <downloadJavadocs>true</downloadJavadocs>
             </configuration>
         </plugin>
@@ -26,9 +27,16 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.14.1</version>
             <configuration>
-                <suiteXmlFiles>
+            <includes>
+            <include>**/*Story.java</include>
+          </includes>
+            <excludes>
+            <exclude>**/RegularTest.java</exclude>
+        </excludes>
+               <!-- <suiteXmlFiles>
                     <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
+               --> 
             </configuration>
         </plugin>
 
@@ -47,8 +55,77 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.6</version>
-        
-      </plugin>
+             </plugin>
+      
+      <plugin>
+        <groupId>org.jbehave</groupId>
+        <artifactId>jbehave-maven-plugin</artifactId>
+        <version>3.9.3</version>
+        <executions>
+          <execution>
+            <id>run-stories-as-embeddables</id>
+            <phase>integration-test</phase>
+            <configuration>
+              <includes>
+                <include>**/*Story.java</include>
+              </includes>
+              <ignoreFailureInStories>true</ignoreFailureInStories>
+              <ignoreFailureInView>false</ignoreFailureInView>
+           </configuration>
+           <goals>
+              <goal>run-stories-as-embeddables</goal>
+           </goals>
+         </execution>
+       </executions>
+     </plugin>
+ 
+     <plugin> 
+       <groupId>org.apache.maven.plugins</groupId> 
+       <artifactId>maven-dependency-plugin</artifactId> 
+       <executions> 
+         <execution> 
+            <id>unpack-jbehave-site-resources</id>
+            <phase>generate-resources</phase> 
+            <goals> 
+               <goal>unpack</goal> 
+            </goals> 
+            <configuration> 
+               <overwriteReleases>false</overwriteReleases> 
+               <overwriteSnapshots>true</overwriteSnapshots> 
+               <artifactItems> 
+                  <artifactItem> 
+                     <groupId>org.jbehave.site</groupId> 
+                     <artifactId>jbehave-site-resources</artifactId> 
+                     <version>3.1.1</version> 
+                     <type>zip</type>
+                     <outputDirectory> ${project.build.directory}/jbehave/view</outputDirectory> 
+                   </artifactItem> 
+                </artifactItems> 
+            </configuration> 
+         </execution> 
+         <execution> 
+            <id>unpack-jbehave-reports-resources</id>
+            <phase>generate-resources</phase> 
+            <goals> 
+               <goal>unpack</goal> 
+            </goals> 
+            <configuration> 
+              <overwriteReleases>false</overwriteReleases> 
+              <overwriteSnapshots>true</overwriteSnapshots> 
+              <artifactItems> 
+                 <artifactItem> 
+                   <groupId>org.jbehave</groupId> 
+                   <artifactId>jbehave-core</artifactId> 
+                   <version>3.1.2</version> 
+                   <outputDirectory>${project.build.directory}/jbehave/view</outputDirectory> 
+                   <includes>**\/*.css,**\/*.ftl,**\/*.js</includes> 
+                 </artifactItem> 
+               </artifactItems> 
+             </configuration> 
+           </execution> 
+         </executions> 
+       </plugin> 
+      
     </plugins>
     </build>
 
@@ -63,6 +140,13 @@
     <artifactId>mail</artifactId>
     <version>1.4.5</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.jbehave/jbehave-core -->
+<dependency>
+    <groupId>org.jbehave</groupId>
+    <artifactId>jbehave-core</artifactId>
+    <version>4.0.5</version>
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/com.sun.mail/smtp -->
 <dependency>
     <groupId>com.sun.mail</groupId>
