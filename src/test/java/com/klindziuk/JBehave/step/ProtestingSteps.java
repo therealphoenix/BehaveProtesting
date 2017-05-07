@@ -125,9 +125,9 @@ public class ProtestingSteps {
 		Assert.assertEquals(errorPage.getErrorMessage(), ErrorPage.ERROR_MESSAGE);
 	}
 	
-
 	@AfterStory
 	public void afterStory() {
 		driver.quit();
+		BrowserDriver.CHROME.killDriver();
 	}
 }

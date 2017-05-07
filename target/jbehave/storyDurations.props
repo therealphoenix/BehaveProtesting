@@ -1,6 +1,6 @@
 #org.jbehave.core.embedder.StoryManager
-#Sun May 07 12:20:39 EEST 2017
+#Sun May 07 21:26:54 EEST 2017
 threads=1
-total=47000
-com/klindziuk/JBehave/story/protesting_story.story=47000
-threadAverage=47000
+total=55000
+com/klindziuk/JBehave/story/protesting_story.story=55000
+threadAverage=55000
