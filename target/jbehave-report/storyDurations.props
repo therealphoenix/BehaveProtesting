@@ -1,0 +1,10 @@
+#org.jbehave.core.embedder.StoryManager
+#Tue May 09 14:44:51 EEST 2017
+stories/protesting_story3.story=0
+stories/protesting_story4.story=4000
+stories/protesting_story1.story=6000
+threads=1
+total=15000
+stories/protesting_story.story=5000
+threadAverage=15000
+stories/protesting_story2.story=0

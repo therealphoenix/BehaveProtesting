@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class QuestionPage extends BasePage {
-	
-	
+		
 	WebDriver driver;
 	By faceBookLinkImage = By.cssSelector("#content > div > a > img");
-
 	
 	public QuestionPage(WebDriver driver) {
 		super(driver);

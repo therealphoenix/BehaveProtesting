@@ -10,23 +10,25 @@ import com.klindziuk.page.MainPage;
 import com.klindziuk.page.QuestionPage;
 import com.klindziuk.util.BrowserDriver;
 
-import org.jbehave.core.annotations.AfterStory;
-import org.jbehave.core.annotations.BeforeStory;
+import org.jbehave.core.annotations.AfterStories;
+import org.jbehave.core.annotations.BeforeStories;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.jbehave.core.steps.Steps;
 
-public class ProtestingSteps {
-	WebDriver driver;
+public class ProtestingSteps extends Steps {
+	WebDriver driver ;
 	MainPage mainPage;
 	QuestionPage questionPage;
 	FacebookPage facebookPage;
 	AdminPage adminPage;
 	ErrorPage errorPage;
 
-	@BeforeStory
+	@BeforeStories
 	public void storySetup() {
 		driver = BrowserDriver.CHROME.selectDriver();
+		driver.manage().window().maximize();
 		mainPage = new MainPage(driver);
 	}
 
@@ -41,7 +43,6 @@ public class ProtestingSteps {
 	@When("I open the url */*")
 	public void openWithSlash() throws Exception {
 		driver.get(BrowserDriver.BASEURL + "/");
-
 	}
 
 	@Then("the page *main* is opened")
@@ -60,7 +61,6 @@ public class ProtestingSteps {
 	@When("I click the link *contact us* on the footer")
 	public void openContactUsPage() throws Exception {
 		questionPage = mainPage.getFooter().openFeedackQuestionPage();
-
 	}
 
 	@Then("*Facebook* image link present")
@@ -71,18 +71,18 @@ public class ProtestingSteps {
 	/* 
 	 * Scenario : check the Facebook page
 	 */
-	@Given("I am on the *contact us* page")
+	@Given("I am on the *contact us* page ")
 	public void openContactUsPageDirectly() throws Exception {
 		driver.get(BrowserDriver.BASEURL + "/contact/contact.html");
 	}
 
-	@When("I click the *Facebook* link")
+	@When("I click the *Facebook* link ")
 	public void openFacebookPage() throws Exception {
 		questionPage = new QuestionPage(driver);
 		facebookPage = questionPage.openFacebookPage();
 	}
 
-	@Then("the page *Facebook* page is opened")
+	@Then("the page *Facebook* page is opened ")
 	public void checkFaceBookTitle() {
 		Assert.assertEquals(facebookPage.getFacebookpageTitle(), FacebookPage.FACEBOOK_TITLE);
 	}
@@ -90,12 +90,12 @@ public class ProtestingSteps {
 	/* 
 	 * Scenario : check the anti-hack page
 	 */
-	@Given("I am on the **main** page")
+	@Given("I am on the **main** page ")
 	public void openMainPageforAntiHackDirectly() throws Exception {
 		driver.get(BrowserDriver.BASEURL);
 	}
 
-	@When("I open URL */admin*")
+	@When("I open URL */admin* ")
 	public void openAdminPage() throws Exception {
 		driver.get(BrowserDriver.BASEURL + "/admin");
 		adminPage = new AdminPage(driver);
@@ -125,8 +125,9 @@ public class ProtestingSteps {
 		Assert.assertEquals(errorPage.getErrorMessage(), ErrorPage.ERROR_MESSAGE);
 	}
 	
-	@AfterStory
+	@AfterStories
 	public void afterStory() {
+		driver.close();
 		driver.quit();
 		BrowserDriver.CHROME.killDriver();
 	}

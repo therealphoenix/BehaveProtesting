@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class FacebookPage {
+
 	WebDriver driver;
 	public static final String FACEBOOK_TITLE = "ПроТестинг - Главная | Facebook";
 	static By messageLocator = By.id("composer_text_input_box");
@@ -16,11 +16,10 @@ public class FacebookPage {
 	static By passwordLocator = By.id("pass");
 	static By loginButtonLocator = By.xpath("//*[@type = 'submit']");
 
-
 	public FacebookPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
+
 	public String getFacebookpageTitle() {
 		return driver.getTitle();
 	}

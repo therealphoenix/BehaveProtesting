@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="com.klindziuk.JBehave.story.ProtestingStory" duration-ms="61473" started-at="2017-05-07T18:25:58Z" finished-at="2017-05-07T18:26:59Z">
+  <suite name="com.klindziuk.JBehave.story.ProtestingStory" duration-ms="49673" started-at="2017-05-09T11:27:27Z" finished-at="2017-05-09T11:28:17Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="61473" started-at="2017-05-07T18:25:58Z" finished-at="2017-05-07T18:26:59Z">
+    <test name="Command line test" duration-ms="49673" started-at="2017-05-09T11:27:27Z" finished-at="2017-05-09T11:28:17Z">
       <class name="com.klindziuk.JBehave.story.ProtestingStory">
-        <test-method status="PASS" signature="run()[pri:0, instance:com.klindziuk.JBehave.story.ProtestingStory@35fb3008]" name="run" duration-ms="61450" started-at="2017-05-07T21:25:58Z" finished-at="2017-05-07T21:26:59Z">
+        <test-method status="PASS" signature="run()[pri:0, instance:com.klindziuk.JBehave.story.ProtestingStory@35fb3008]" name="run" duration-ms="49645" started-at="2017-05-09T14:27:27Z" finished-at="2017-05-09T14:28:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->

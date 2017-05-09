@@ -4,8 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AutomationPage extends BasePage {
-	
-	
+
 	WebDriver driver;
 	public static final By basicConceptsLocator = By.cssSelector("");
 	public static final By loadTestingLocator = By.cssSelector("a.nav:nth-child(2)");
@@ -14,7 +13,6 @@ public class AutomationPage extends BasePage {
 	public static final By toBookMarksLocator = By.cssSelector("#bookmarkLink");
 	public static final By toUpLocator = By.cssSelector(".linktop > a:nth-child(1)");
 
-		
 	public AutomationPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;

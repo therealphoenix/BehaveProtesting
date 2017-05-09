@@ -2,7 +2,6 @@ package com.klindziuk.page;
 
 import org.openqa.selenium.WebDriver;
 
-
 /*
  *  This page will be implemented ASAP
  */
